@@ -1,0 +1,61 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins" as *;
+
+.login {
+  background-color: $page-background-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    &__form{
+      margin-top: 8em;
+    }
+
+  h1 {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5em;
+  }
+
+  &__input{
+    display: flex;
+    flex-direction: column;
+
+    label{
+        margin-bottom: 0.5em;
+    }
+
+    input{
+        @include input-field;
+        border-radius: $global-bRadius;
+        border: $input-border;
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+
+      &--button{
+          @include input-field;
+          border-radius: $global-bRadius;
+          border: 0;
+      
+          font-size: 1em;
+          font-weight: bold;
+      
+          background-color: $blue;
+          margin-top: 3rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+  }
+
+}

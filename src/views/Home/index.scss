@@ -1,0 +1,47 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins" as *;
+
+.home {
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2em;
+    column-gap: 6rem;
+    padding: 0 10em 5em;
+  }
+
+  &__card {
+    @include card-product;
+
+    img{
+      width: 329px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+  }
+
+  &__card-section {
+    padding: 1em;
+    text-align: center;
+
+    p{
+        padding-bottom: 1rem;  
+    }
+
+    button{
+        @include card-button;
+        background-color: $blue;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+  }
+
+}

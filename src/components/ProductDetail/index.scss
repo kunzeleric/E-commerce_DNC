@@ -1,0 +1,95 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins" as *;
+
+.product-detail{
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+
+    img{
+        width: 329px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+  
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 4em;
+        width: 30%;
+    }
+
+    &__card{
+        @include card-purchase;
+        
+        p{
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+    }
+
+    &__description{
+
+        h2{
+            padding-bottom: 2rem;
+        }
+
+        p{
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #D9D9D9;
+            width: 65%;
+        }
+    }
+
+    &__right{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        width: 30%;
+
+        h1{
+            text-align: center;
+            font-weight: normal;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #D9D9D9;
+            font-size: 2em;
+        }
+
+        p{
+            font-size: 1.5em;
+        }
+    }
+
+    &__cube-colors{
+        display: flex;
+        column-gap: 2em;
+
+    }
+    
+    &__sizes{
+        display: flex;
+        column-gap: 2em;
+        margin-bottom: 2rem;
+    }
+
+    span{
+        cursor: pointer;
+    }
+
+    &__pay-button{
+        @include purchase-button;
+        background-color: $blue;
+        font-size: 1.5em;
+        font-weight: 700;
+        border-radius: 10px;
+        border: 0;
+
+        a{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+}
